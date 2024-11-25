@@ -26,43 +26,36 @@ int main() {
 
     while (1) {
         printf("\nPassword Manager Menu:\n");
-        printf("1. Generate Password\n");
-        printf("2. Create an Entry\n");
-        printf("3. Search an Entry\n");
-        printf("4. Display All Entries\n");
-        printf("5. Update an Entry\n");
-        printf("6. Delete an Entry\n");
-        printf("7. Delete All Entries\n");
-        printf("8. Exit\n");
+        printf("1. Create an Entry \n");
+        printf("2. Search an Entry\n");
+        printf("3. Display All Entries\n");
+        printf("4. Update an Entry\n");
+        printf("5. Delete an Entry\n");
+        printf("6. Delete All Entries\n");
+        printf("7. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
         switch (choice) {
-            case 1: {
-                char password[20];
-                generatePassword(password, 12);
-                printf("Generated Password: %s\n", password);
-                break;
-            }
-            case 2:
+            case 1:
                 createEntry();
                 break;
-            case 3:
+            case 2:
                 searchEntry();
                 break;
-            case 4:
+            case 3:
                 displayAllEntries();
                 break;
-            case 5:
+            case 4:
                 updateEntry();
                 break;
-            case 6:
+            case 5:
                 deleteEntry();
                 break;
-            case 7:
+            case 6:
                 deleteAllEntries();
                 break;
-            case 8:
+            case 7:
                 printf("Exiting...\n");
                 return 0;
             default:
